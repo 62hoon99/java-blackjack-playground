@@ -1,4 +1,4 @@
-package nextstep.blackjack.model;
+package nextstep.blackjack.model.card;
 
 import java.util.Arrays;
 import java.util.Collections;

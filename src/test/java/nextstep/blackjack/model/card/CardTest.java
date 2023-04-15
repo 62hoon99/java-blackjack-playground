@@ -1,6 +1,5 @@
-package nextstep.blackjack.model;
+package nextstep.blackjack.model.card;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
