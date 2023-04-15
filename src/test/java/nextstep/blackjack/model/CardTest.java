@@ -46,6 +46,6 @@ public class CardTest {
         //given
         MultiValueCard multiValueCard = new MultiValueCard(CardShape.CLOVER, "A");
         //then
-        assertThat(multiValueCard.getValue()).contains(1, 11);
+        assertThat(multiValueCard.getValues()).contains(1, 11);
     }
 }

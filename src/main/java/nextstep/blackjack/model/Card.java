@@ -7,4 +7,6 @@ public interface Card {
     boolean isUsed();
 
     String getInfo();
+
+    int getValue();
 }

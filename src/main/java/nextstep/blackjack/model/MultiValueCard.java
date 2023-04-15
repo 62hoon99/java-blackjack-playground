@@ -13,7 +13,12 @@ public class MultiValueCard extends AbstractCard {
         this.value = Arrays.asList(1, 11);
     }
 
-    public List<Integer> getValue() {
+    @Override
+    public int getValue() {
+        return this.value.get(0);
+    }
+
+    public List<Integer> getValues() {
         return Collections.unmodifiableList(value);
     }
 }

@@ -18,6 +18,7 @@ public class SingleValueCard extends AbstractCard {
         }
     }
 
+    @Override
     public int getValue() {
         return this.value;
     }
