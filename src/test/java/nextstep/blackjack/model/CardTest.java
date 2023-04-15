@@ -40,4 +40,12 @@ public class CardTest {
         assertThat(singleNumberCard.getValue()).isEqualTo(5);
         assertThat(kingNumberCard.getValue()).isEqualTo(10);
     }
+
+    @Test
+    public void multi_value_card_숫자_반환() throws Exception {
+        //given
+        MultiValueCard multiValueCard = new MultiValueCard(CardShape.CLOVER, "A");
+        //then
+        assertThat(multiValueCard.getValue()).contains(1, 11);
+    }
 }
