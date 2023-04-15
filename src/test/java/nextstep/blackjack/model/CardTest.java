@@ -30,4 +30,14 @@ public class CardTest {
         assertThat(heartCard.getInfo()).isEqualTo("K하트");
         assertThat(diamondCard.getInfo()).isEqualTo("A다이아몬드");
     }
+
+    @Test
+    public void single_value_card_숫자_반환() throws Exception {
+        //given
+        SingleValueCard singleNumberCard = new SingleValueCard(CardShape.CLOVER, "5");
+        SingleValueCard kingNumberCard = new SingleValueCard(CardShape.CLOVER, "K");
+        //then
+        assertThat(singleNumberCard.getValue()).isEqualTo(5);
+        assertThat(kingNumberCard.getValue()).isEqualTo(10);
+    }
 }
