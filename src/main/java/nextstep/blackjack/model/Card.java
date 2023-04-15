@@ -5,4 +5,6 @@ public interface Card {
     void use();
 
     boolean isUsed();
+
+    String getInfo();
 }
