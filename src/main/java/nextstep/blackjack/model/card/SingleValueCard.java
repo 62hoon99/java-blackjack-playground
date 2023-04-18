@@ -2,20 +2,11 @@ package nextstep.blackjack.model.card;
 
 public class SingleValueCard extends AbstractCard {
 
-    private static final int DEFAULT_VALUE_FOR_STRING_NAME = 10;
     private final int value;
 
-    public SingleValueCard(CardShape shape, String name) {
-        super(shape, name);
-        this.value = createValue(name);
-    }
-
-    private int createValue(String name) {
-        try {
-            return Integer.parseInt(name);
-        } catch (NumberFormatException e) {
-            return DEFAULT_VALUE_FOR_STRING_NAME;
-        }
+    public SingleValueCard(CardShape shape, CardName cardName) {
+        super(shape, cardName.getInitial());
+        this.value = cardName.getNumber();
     }
 
     @Override

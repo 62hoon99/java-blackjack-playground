@@ -22,11 +22,8 @@ public class CardPackFactory {
 
     private static List<Card> createCardsByShape(CardShape shape) {
         List<Card> cards = new ArrayList<>();
-
-        addNumberCards(shape, cards);
-        addHumanCards(shape, cards);
+        addSingleValueCards(shape, cards);
         addAceCard(shape, cards);
-
         return cards;
     }
 
@@ -34,16 +31,10 @@ public class CardPackFactory {
         cards.add(new MultiValueCard(shape, ACE));
     }
 
-    private static void addHumanCards(CardShape shape, List<Card> cards) {
-        Arrays.stream(HumanCardName.values())
-                .forEach(humanCardName ->
-                        cards.add(new SingleValueCard(shape, humanCardName.getInitial()))
+    private static void addSingleValueCards(CardShape shape, List<Card> cards) {
+        Arrays.stream(CardName.values())
+                .forEach(CardName ->
+                        cards.add(new SingleValueCard(shape, CardName))
                 );
-    }
-
-    private static void addNumberCards(CardShape shape, List<Card> cards) {
-        for (int i = 2; i <= 9; i++) {
-            cards.add(new SingleValueCard(shape, String.valueOf(i)));
-        }
     }
 }
