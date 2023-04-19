@@ -34,4 +34,11 @@ public class Cards {
 
         return sum + multiValueCards.size();
     }
+
+    public String getInfo() {
+        List<String> cardsInfo = cards.stream()
+                .map(Card::getInfo)
+                .collect(Collectors.toList());
+        return String.join(", ", cardsInfo);
+    }
 }
