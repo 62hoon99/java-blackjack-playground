@@ -6,4 +6,6 @@ public interface User {
     void receiveCard(Card... card);
 
     String cardInfo();
+
+    int getNumber();
 }
