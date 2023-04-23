@@ -10,11 +10,13 @@ import java.util.stream.Collectors;
 
 public class InputView {
 
+    private static final String NAME_INPUT_MSG = "게임에 참여할 사람의 이름을 입력하세요.(쉼표 기준으로 분리)";
     private static final String NUMBER_FORMAT_EXCEPTION_MSG = "숫자를 입력해 주세요.";
     private static final String BETTING_MONEY_MSG = "의 배팅 금액은?";
     private static final Scanner scanner = new Scanner(System.in);
 
     public static List<User> participate() {
+        System.out.println(NAME_INPUT_MSG);
         List<String> names = getNames();
         return getUsers(names);
     }

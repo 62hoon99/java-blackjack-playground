@@ -29,4 +29,9 @@ public abstract class AbstractUser implements User {
     public int getNumber() {
         return cards.getAvailableSum();
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
 }

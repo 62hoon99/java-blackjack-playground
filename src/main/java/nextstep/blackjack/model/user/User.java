@@ -8,4 +8,6 @@ public interface User {
     String cardInfo();
 
     int getNumber();
+
+    String getName();
 }
