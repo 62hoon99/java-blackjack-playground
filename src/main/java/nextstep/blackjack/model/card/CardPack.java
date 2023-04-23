@@ -2,6 +2,7 @@ package nextstep.blackjack.model.card;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Random;
 
 public class CardPack {
 
@@ -19,9 +20,12 @@ public class CardPack {
     }
 
     public Card getRandomCard() {
-        Card selectedCard = cards.stream()
-                .findAny()
-                .orElseThrow(() -> new NoSuchElementException(EMPTY_CARDS_MESSAGE));
+        if (cards.size() == 0) {
+            throw new NoSuchElementException(EMPTY_CARDS_MESSAGE);
+        }
+
+        int randomIndex = new Random().nextInt(cards.size());
+        Card selectedCard = cards.get(randomIndex);
         cards.remove(selectedCard);
         return selectedCard;
     }
