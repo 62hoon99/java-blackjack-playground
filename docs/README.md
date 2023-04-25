@@ -1,6 +1,6 @@
 # 기능
 ## Denomination
-- [ ] score를 반환한다.
+- [x] score를 반환한다.
 
 ## Hit
 - [ ] draw(카드를 한 장 더 받고)하고 다음 state를 반환한다.
