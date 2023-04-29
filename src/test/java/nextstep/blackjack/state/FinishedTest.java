@@ -41,4 +41,12 @@ public class FinishedTest {
         //then
         assertSame(stay, stay.stay());
     }
+
+    @Test
+    public void finished상태_인지_확인() throws Exception {
+        //given
+        Finished stay = new Stay(new Cards());
+        //then
+        Assertions.assertThat(stay.isFinished()).isTrue();
+    }
 }
