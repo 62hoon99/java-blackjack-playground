@@ -9,9 +9,9 @@ import java.util.Arrays;
 
 public abstract class AbstractUser implements User {
 
-    private final String name;
-    private final int battingMoney;
-    private final State state;
+    final String name;
+    final int battingMoney;
+    final State state;
 
     public AbstractUser(String name, int battingMoney) {
         this.name = name;
@@ -25,8 +25,4 @@ public abstract class AbstractUser implements User {
                 .forEach(state::draw);
     }
 
-    @Override
-    public String toString() {
-        return name + "카드: " + state.cards().toString();
-    }
 }
