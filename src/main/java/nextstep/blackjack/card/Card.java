@@ -14,6 +14,10 @@ public class Card {
         return denomination.getScore();
     }
 
+    public boolean isAce() {
+        return denomination.isAce();
+    }
+
     @Override
     public String toString() {
         return denomination.toString() + suit.toString();
