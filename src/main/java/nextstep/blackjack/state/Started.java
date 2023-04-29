@@ -10,6 +10,7 @@ public abstract class Started implements State{
         this.cards = cards;
     }
 
+    @Override
     public Cards cards() {
         return cards;
     }

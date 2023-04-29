@@ -28,4 +28,12 @@ public enum Denomination {
     public int getScore() {
         return score;
     }
+
+    @Override
+    public String toString() {
+        if (score == 10 || isAce()) {
+            return String.valueOf(name().charAt(0));
+        }
+        return String.valueOf(score);
+    }
 }

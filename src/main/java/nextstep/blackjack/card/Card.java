@@ -13,4 +13,9 @@ public class Card {
     public int getScore() {
         return denomination.getScore();
     }
+
+    @Override
+    public String toString() {
+        return denomination.toString() + suit.toString();
+    }
 }

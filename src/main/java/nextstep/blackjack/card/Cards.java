@@ -2,6 +2,7 @@ package nextstep.blackjack.card;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cards {
 
@@ -21,5 +22,14 @@ public class Cards {
 
     public boolean isBust() {
         return getScore() > MAX_COUNT;
+    }
+
+    @Override
+    public String toString() {
+        List<String> cardInfos = cards.stream()
+                .map(Card::toString)
+                .collect(Collectors.toList());
+
+        return String.join(", ", cardInfos);
     }
 }
