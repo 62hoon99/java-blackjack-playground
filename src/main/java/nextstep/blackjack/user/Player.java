@@ -7,6 +7,11 @@ public class Player extends AbstractUser {
     }
 
     @Override
+    public int result() {
+        return state.cards().getScore();
+    }
+
+    @Override
     public String toString() {
         return name + "카드: " + state.cards().toString();
     }
