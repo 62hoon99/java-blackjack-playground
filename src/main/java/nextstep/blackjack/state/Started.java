@@ -9,4 +9,8 @@ public abstract class Started implements State{
     public Started(Cards cards) {
         this.cards = cards;
     }
+
+    public Cards cards() {
+        return cards;
+    }
 }
