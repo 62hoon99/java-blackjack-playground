@@ -1,14 +1,12 @@
-package nextstep.blackjack;
+package nextstep.blackjack.user;
 
 import nextstep.blackjack.card.Card;
 import nextstep.blackjack.card.Denomination;
 import nextstep.blackjack.card.Suit;
-import nextstep.blackjack.user.Player;
-import nextstep.blackjack.user.User;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class UserTest {
+public class PlayerTest {
 
     @Test
     public void 현재_보유한_카드를_반환한다() throws Exception {
