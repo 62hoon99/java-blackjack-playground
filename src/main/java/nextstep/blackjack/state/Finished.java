@@ -18,4 +18,6 @@ public abstract class Finished extends Started {
     public State stay() {
         return this;
     }
+
+    public abstract double earningRate();
 }
