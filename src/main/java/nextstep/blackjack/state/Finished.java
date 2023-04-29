@@ -19,5 +19,10 @@ public abstract class Finished extends Started {
         return this;
     }
 
+    @Override
+    public boolean isFinished() {
+        return true;
+    }
+
     public abstract double earningRate();
 }

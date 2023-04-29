@@ -21,7 +21,7 @@
 - [x] 카드를 반환한다.
 
 ## Running
-- [ ] finished 상태인지 반환한다.
+- [x] finished 상태인지 반환한다.
 - [ ] profit(이익)을 반환한다.
 
 ## Finished
