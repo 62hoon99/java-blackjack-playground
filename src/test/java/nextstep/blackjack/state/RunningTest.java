@@ -13,4 +13,12 @@ public class RunningTest {
         //then
         Assertions.assertThat(hit.isFinished()).isFalse();
     }
+
+    @Test
+    public void profit_반환() throws Exception {
+        //given
+        Running hit = new Hit(new Cards());
+        //then
+        Assertions.assertThat(hit.profit(1000f)).isEqualTo(0f);
+    }
 }

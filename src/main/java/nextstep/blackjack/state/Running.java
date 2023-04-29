@@ -12,4 +12,8 @@ public abstract class Running extends Started {
     public boolean isFinished() {
         return false;
     }
+
+    public double profit(double battingMoney) {
+        return 0f;
+    }
 }
