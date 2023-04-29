@@ -11,7 +11,7 @@ public abstract class Finished extends Started {
 
     @Override
     public State draw(Card card) {
-        return this;
+        throw new IllegalStateException("카드를 받을 수 없는 상태입니다.");
     }
 
     @Override
